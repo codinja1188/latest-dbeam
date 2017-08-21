@@ -486,6 +486,37 @@ config SCx200_GPIO
 
 	  If compiled as a module, it will be called scx200_gpio.
 
+config DBEAM_ADC
+	tristate "DBeam ADC Controller support"
+	help
+	   It will access the ADC controller.
+
+config DBEAM_DAC
+	tristate "DBeam DAC Controller support"
+	help
+	   It will access the DAC controller.
+
+config DBEAM_STEPPER1
+	tristate "DBeam STEPPER1 Controller support"
+	help
+	   It will access the STEPPER1 controller.
+
+config DBEAM_STEPPER2
+	tristate "DBeam STEPPER2 Controller support"
+	help
+	   It will access the STEPPER2 controller.
+
+config DBEAM_STEPPER3
+	tristate "DBeam STEPPER3 Controller support"
+	help
+	   It will access the STEPPER3 controller.
+
+config DBEAM_EXT_TRIGGER
+	tristate "DBeam external trigger support"
+	depends on DBEAM_STEPPER3
+        help
+           It will access external trigger for specifci GPIO PIN.
+
 config PC8736x_GPIO
 	tristate "NatSemi PC8736x GPIO Support"
 	depends on X86_32 && !UML
