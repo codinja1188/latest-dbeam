@@ -165,6 +165,13 @@ config MAX5821
 	  Say yes here to build support for Maxim MAX5821
 	  10 bits DAC.
 
+config MAX11312
+	tristate "DBeam: Maxim MAX11312 DAC driver"
+	depends on I2C
+	help
+	  Say yes here to build support for Maxim MAX5821
+	  10 bits DAC.
+
 config MCP4725
 	tristate "MCP4725 DAC driver"
 	depends on I2C
